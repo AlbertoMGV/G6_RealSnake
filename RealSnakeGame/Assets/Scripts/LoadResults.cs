@@ -6,6 +6,7 @@ using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using obj1;
 using UnityEngine.UI;
+using System.Linq;
 
 public class LoadResults : MonoBehaviour
 {
@@ -45,9 +46,15 @@ public class LoadResults : MonoBehaviour
             {
                 JObject json = JObject.Parse(webRequest.downloadHandler.text);
                 results = json["objects"].ToObject<List<pnts>>();
-                for (int i = 0; i < results.Count; i++)
+                IEnumerable<pnts> op = results.OrderByDescending(pnts => pnts.puntuacion);
+                int top = 0;
+                foreach (pnts ss in op)
                 {
-                    top5.text = top5.text+"\n"+(i+1)+". "+results[0].info();
+                    Debug.Log(ss.nombre + " - " + ss.puntuacion);
+                    if (top<5) {
+                        top5.text = top5.text + "\n" + (top + 1) + ". " + ss.puntuacion + " Puntos - " + ss.nombre;
+                    }
+                    top++;
                 }
             }
         }

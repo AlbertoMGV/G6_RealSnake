@@ -6,4 +6,9 @@ public class TransitionsManager : MonoBehaviour {
     {
         SceneManager.LoadScene(sceneName);
     }
+
+    public void exitGame()
+    {
+        Application.Quit();
+    }
 }
