@@ -482,8 +482,8 @@ RectTransform:
   m_Father: {fileID: 583103480}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.1, y: 0.35}
-  m_AnchorMax: {x: 0.9, y: 0.45}
+  m_AnchorMin: {x: 0.1, y: 0.25}
+  m_AnchorMax: {x: 0.9, y: 0.55}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -520,7 +520,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Juego super bonito y original de una serpientita que come manzanas jjj
+  m_Text: Bua esto es juego con el que vas a flipar hermano, eres una serpiente que
+    va por el mapa y tienes que comer las manzanitas que hay por el mapa. Lo mas jarto
+    es que vas a poder ver la puntacion de la people online brodel!
 --- !u!222 &880095939
 CanvasRenderer:
   m_ObjectHideFlags: 0
