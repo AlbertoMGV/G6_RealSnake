@@ -63,7 +63,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Helper Scripts\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\Helper Scripts\GameplayController.cs" />
+    <Compile Include="Assets\Scripts\Helper Scripts\Tags.cs" />
     <Compile Include="Assets\Scripts\LoadResults.cs" />
+    <Compile Include="Assets\Scripts\Pickup Scripts\DeactivatePickUp.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\PlayerInput.cs" />
     <Compile Include="Assets\Scripts\pnts.cs" />
     <Compile Include="Assets\Scripts\SendResults.cs" />
     <Compile Include="Assets\Scripts\TransitionsManager.cs" />
@@ -75,6 +81,7 @@
     <None Include="Assets\Vuforia\Shaders\OutlineOpaque.shader" />
     <None Include="Assets\Vuforia\Shaders\DepthMask.shader" />
     <None Include="Assets\Vuforia\Databases\Emulator\VuforiaEmulator.xml" />
+    <None Include="Assets\Fonts\OpenSans\License!.txt" />
     <None Include="Assets\JsonDotNet\link.xml" />
     <None Include="Assets\Vuforia\Shaders\ClippingMask.shader" />
     <None Include="Assets\Vuforia\Shaders\BrightTexture.shader" />
