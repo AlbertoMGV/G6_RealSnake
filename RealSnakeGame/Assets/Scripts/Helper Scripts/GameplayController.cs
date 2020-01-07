@@ -13,7 +13,7 @@ public class GameplayController : MonoBehaviour {
     private float z_Pos = 5.8f;
 
     private Text score_Text;
-    private int scoreCount;
+    static public int scoreCount = 0;
 
 	void Awake () {
         MakeInstace();

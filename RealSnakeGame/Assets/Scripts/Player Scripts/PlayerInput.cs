@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerInput : MonoBehaviour {
 
     private PlayerController playerController;
 
     private int horizontal = 0, vertical = 0;
+
+    //private Text test1;
 
     public enum Axis {
         Horizontal,
@@ -15,16 +18,17 @@ public class PlayerInput : MonoBehaviour {
 
 	void Awake () {
         playerController = GetComponent<PlayerController>();
-	}
+        //test1 = GameObject.Find("test1").GetComponent<Text>();
+    }
 	
 	void Update () {
 
-        horizontal = 0;
-        vertical = 0;
+        //horizontal = 0;
+        //vertical = 0;
 
         //GetKeyboardInput();
 
-        SetMovement();
+        //SetMovement();
 
 	}
 
@@ -56,6 +60,8 @@ public class PlayerInput : MonoBehaviour {
                                                PlayerDirection.RIGHT : PlayerDirection.LEFT);
 
         }
+        horizontal = 0;
+        vertical = 0;
 
     }
 
@@ -103,15 +109,23 @@ public class PlayerInput : MonoBehaviour {
         {
             case "left":
                 horizontal = -1;
+                //test1.text = "left";
+                SetMovement();
                 break;
             case "rigth":
                 horizontal = 1;
+                //test1.text = "rigth";
+                SetMovement();
                 break;
             case "up":
                 vertical = 1;
+                //test1.text = "up";
+                SetMovement();
                 break;
             case "down":
                 vertical = -1;
+                //test1.text = "down";
+                SetMovement();
                 break;
         }
 

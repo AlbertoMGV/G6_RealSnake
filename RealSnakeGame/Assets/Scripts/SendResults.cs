@@ -17,11 +17,18 @@ public class SendResults : MonoBehaviour
     InputField nom;
     Text top5;
     int punts;
+    private Text score_Text;
+
+    void Start()
+    {
+        score_Text = GameObject.Find("Titulo").GetComponent<Text>();
+        score_Text.text = "Score: "+GameplayController.scoreCount+" Points";
+    }
 
     public void send()
     {
         //Importar aqui en "punts" el valor de los puntos optenidos en el juego
-        punts = 2;
+        punts = GameplayController.scoreCount;
         nom = GameObject.Find("nombre").GetComponent<InputField>();
         StartCoroutine(PostRequest("http://51.15.86.111:9090/api/puntuaciones/"));
         SceneManager.LoadScene("Resultados");
