@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class AudioManager : MonoBehaviour {
 
     public static AudioManager instance;
@@ -25,10 +26,12 @@ public class AudioManager : MonoBehaviour {
 
     public void Play_DeadSound()
     {
+
         AudioSource.PlayClipAtPoint(dead_Sound, transform.position);
         SceneManager.LoadScene("Finish");
+
     }
-	
+
 
 } // class
 

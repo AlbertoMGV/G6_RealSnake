@@ -31,7 +31,9 @@ public class PlayerController : MonoBehaviour {
 
     private GameObject panelIntro;
 
-    public void startJuego () {
+
+    public void startJuego()
+    {
 
         panelIntro = GameObject.Find("panelIntro");
         panelIntro.SetActive(false);
@@ -51,10 +53,11 @@ public class PlayerController : MonoBehaviour {
 
         };
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    }
+
+
+    // Update is called once per frame
+    void Update () {
         CheckMovementFrequency();
 	}
 
