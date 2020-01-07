@@ -36,6 +36,7 @@ public class LoadResults : MonoBehaviour
             int page = pages.Length - 1;
             top5.text = "";
 
+            Debug.Log("GETREQUEST");
 
             if (webRequest.isNetworkError)
             {
@@ -52,6 +53,7 @@ public class LoadResults : MonoBehaviour
                     Debug.Log(ss.nombre + " - " + ss.puntuacion);
                     if (top<5) {
                         top5.text = top5.text + "\n" + (top + 1) + ". " + ss.puntuacion + " Puntos - " + ss.nombre;
+                        Debug.Log("TOP");
                     }
                     top++;
                 }

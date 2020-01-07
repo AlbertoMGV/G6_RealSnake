@@ -16,7 +16,7 @@ public class SendResults : MonoBehaviour
     List<pnts> results;
     InputField nom;
     Text top5;
-    int punts;
+    public int punts;
     private Text score_Text;
 
     void Start()
