@@ -29,7 +29,12 @@ public class PlayerController : MonoBehaviour {
 
     private bool create_Node_At_Tail;
 
-	void Awake () {
+    private GameObject panelIntro;
+
+    public void startJuego () {
+
+        panelIntro = GameObject.Find("panelIntro");
+        panelIntro.SetActive(false);
 
         tr = transform;
         main_Body = GetComponent<Rigidbody>();
@@ -39,10 +44,10 @@ public class PlayerController : MonoBehaviour {
 
         delta_Position = new List<Vector3>() {
 
-            new Vector3(-step_Length, 0f),   // -x .. LEFT
-            new Vector3(0f, step_Length),   // y .. UP
-            new Vector3(step_Length, 0f),  // x .. RIGHT
-            new Vector3(0f, -step_Length) // -y .. DOWN
+            new Vector3(-step_Length, 0f),
+            new Vector3(0f, step_Length),
+            new Vector3(step_Length, 0f),
+            new Vector3(0f, -step_Length)
 
         };
 
